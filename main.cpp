@@ -59,7 +59,7 @@ int main() {
     ArrayIterator *ai=a.getIterator();
     printSequence(ai);
     findMin(ai);
-/*
+
     Queue q;
     for (int i = 0; i < 11; ++i) {
         q.push(i);
@@ -68,6 +68,6 @@ int main() {
     {
         std::cout<< q.front() << "\n";
         q.pop();
-    }*/
+    }
     return 0;
 }
