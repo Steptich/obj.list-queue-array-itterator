@@ -4,7 +4,8 @@
 #include "iterator.h"
 #include "array.h"
 
-
+//diky iteratoru nepotrebuji delat vice fci pro jednotlive classy,
+// staci potomci
 void printSequence(Iterator *i)//vytiskne posloup seznamu
 {
     std::cout << "-----------------\n";
