@@ -4,7 +4,8 @@
 
 #ifndef LIST_ITERATOR_H
 #define LIST_ITERATOR_H
-//abstraktni iterator, nedela nic jen ma specializaci/potomky
+//abstraktni iterator, nedela nic
+// jen ma specializaci/potomky
 
 #include "datatype.h"
 
@@ -31,7 +32,9 @@ protected:
     Element *current; //ukazatel na soucasny prvek
 public:
     ListIterator(List *l);
-    virtual ~ListIterator(){} //nemusel bych psat virtual, ale je to dobry zvyk pro prehled
+    virtual ~ListIterator(){}
+    //nemusel bych psat virtual,
+    // ale je to dobry zvyk pro prehled
     virtual void reset();
     virtual bool next();
     virtual Data& data();
@@ -47,7 +50,9 @@ protected:
     int index;
 public:
     ArrayIterator(Array *a);
-    virtual ~ArrayIterator(){} //nemusel bych psat virtual, ale je to dobry zvyk pro prehled
+    virtual ~ArrayIterator(){}
+    //nemusel bych psat virtual,
+    // ale je to dobry zvyk pro prehled
     virtual void reset();
     virtual bool next();
     virtual Data& data();

@@ -18,10 +18,12 @@ class List{
     void copyFrom(List &src);
 public:
     List();
-    List(List &other); //kopirovaci konstruktor s hlubokou kopii
+    List(List &other);
+    //kopirovaci konstruktor s hlubokou kopii
     ~List();
     bool isEmpty() const {return itemCounter ==0;}
-    int getItemCount() const {return itemCounter;} //vrat pocet counteru
+    int getItemCount() const {return itemCounter;}
+    //vrat pocet counteru
     Data front() const;
     Data back() const;
     void pushFront(Data d);
@@ -30,9 +32,12 @@ public:
     void popBack();
     void print() const;
     void clean();
-    bool remove(Data d); //metoda na vymazani urciteho prvku s daty
+    bool remove(Data d);
+    //metoda na vymazani urciteho prvku s daty
     Element * find(Data d); //hledaci fce
-    friend class ListIterator; //aby tato funkce mohla pristupovat k protected, ale nic nezdedi
+    friend class ListIterator;
+//aby tato funkce mohla pristupovat k protected,
+// ale nic nezdedi
     ListIterator* getIterator();
 };
 

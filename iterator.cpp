@@ -6,7 +6,6 @@
 #include "list.h"
 #include "element.h"
 #include "array.h"
-#include <iostream>
 //============================================================
 ListIterator::ListIterator(List *l)
 : list(l), current(l->first)
@@ -17,11 +16,14 @@ current = list->first; //vrati ukazatel na zacatek
 }
 
 bool ListIterator::next() {
-    if(current!=list->last){ //funkce na prochazeni, nevim kde zacinam
+    if(current!=list->last){
+        //funkce na prochazeni, nevim kde zacinam
         current=current->next; //kontrola jestli nejsem na konci
     }
     else{
-        reset(); //kdyz jsem na konci skoc zase na zacatek abych prosel cele kdybych nezacinal na zacatku
+        reset(); //kdyz jsem na konci skoc
+        //zase na zacatek abych prosel cele
+        // kdybych nezacinal na zacatku
     }
     if(current==list->last) { //pripad kdy jen dva prvky
         return false;
@@ -34,20 +36,23 @@ Data &ListIterator::data() {
 }
 //=================================================================
 ArrayIterator::ArrayIterator(Array *a)
-: array(a), index(-1), current(a->at(index)) //abych zacinal pred zacatkem
+: array(a), index(-1), current(a->at(index))
+//abych zacinal pred zacatkem
 {}
 
 void ArrayIterator::reset() {
     index=-1;
-    current=array->at(index); //opet pred vsechny data
+    current=array->at(index);
+    //opet pred vsechny data
 }
 
 bool ArrayIterator::next()
 {
-    if (index!=((array->capacity))) //pokud neni na konci pole
+    if (index!=((array->capacity)))
+        //pokud neni na konci pole
     {
 
-        current=array->at(++index); //posun se o index
+        current=array->at(++index);//posun se o index
 
 
     }

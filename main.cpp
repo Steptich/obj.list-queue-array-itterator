@@ -5,7 +5,7 @@
 #include "array.h"
 
 
-void printSequence(Iterator *i) //vytiskne posloup seznamu
+void printSequence(Iterator *i)//vytiskne posloup seznamu
 {
     std::cout << "-----------------\n";
     i->reset();
@@ -23,7 +23,8 @@ Data findMin(Iterator *i)
     i->reset(); //abych zase zacal od zacatku
     while (i->next()) //dokud cele neprojde
     {
-        if (!valid) //zajistim abych mel na zacatku porovnavaci hodnotu z prvniho prvku seznamu s daty
+        if (!valid)
+    //zajistim abych mel na zacatku porovnavaci hodnotu z prvniho prvku seznamu s daty
         {
             min=i->data();
             valid=true;
@@ -45,14 +46,16 @@ int main() {
     l.pushBack(6);
     l.pushFront(2);
     //l.print();
-    ListIterator *li=l.getIterator(); //priradi listu li iterator, vlastne mi nezalezi na datech co tam jsou
+    ListIterator *li=l.getIterator();
+    //priradi listu li iterator, vlastne mi nezalezi na datech co tam jsou
     //staci mit specializaci pro danou tridu
     printSequence(li);
     findMin(li);
     List m(l); //kopirovaci konstruktor
     m.print();
 
-    Array a (3); //takhle syntax kdyz ma classa parametr
+    Array a (3);
+    //takhle syntax kdyz ma classa parametr
     a.setData(1,0);
     a.setData(2,1);
     a.setData(3,2);

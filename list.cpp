@@ -19,18 +19,19 @@ List::List(List &other)
 {
     iniList();
     copyFrom(other);
-    //vytvori dalsi seznam a prekoporuje, takze s ni muzu pracovat zvlast a nezmenim puvodni
+    //vytvori dalsi seznam a prekoporuje,
+    // takze s ni muzu pracovat zvlast a nezmenim puvodni
     //hluboka kopie
 }
 
 void List::copyFrom(List &src) {
-    Element *ptr = src.first->next; //pomocny ukazatel ukazuje na prvni s daty z puvodniho
+    Element *ptr = src.first->next;
+    //pomocny ukazatel ukazuje na prvni s daty z puvodniho
     while(ptr!=src.last) //dokud nedojete na konec
     {
         this->pushBack(ptr->getData());
         //ukazatel this ukazuje na objekt classy metody kterou pises ted
         //takze a.copyForm(other) ti udela a.pushBack(ptr.getData())
-        //neboli vezme soucany list a strci do zadu prvni prvek z puvodniho seznamu
         ptr = ptr->next;
     }
 }
@@ -49,7 +50,8 @@ void List::pushFront(Data d) {
     first= first->prev; //novy prazdny se stane prvnim
     itemCounter++; //zvednu pocet existujicich
 }
-//jelikoz tvorime symetricky, postaci first <=> last, prev <=> next
+//jelikoz tvorime symetricky,
+// postaci first <=> last, prev <=> next
 
 void List::pushBack(Data d) {
     last->setData(d); //do posledniho v rade dam data
@@ -120,8 +122,8 @@ Element *List::find(Data d) {
 
 bool List::remove(Data d) {
     Element* p=find(d);
-    if(!p) //nullptr se pocita jako false takze !nullptr je true
-    {
+    if(!p)
+    {//nullptr se pocita jako false takze !nullptr je true
         return false;
     }
     p->next->prev = p->prev; //nasledujici neukazuje jiz na p ale na predchozi
@@ -131,7 +133,8 @@ bool List::remove(Data d) {
 }
 
 ListIterator *List::getIterator() {
-    return new ListIterator(this); //priradi listu iterator
+    return new ListIterator(this);
+    //priradi listu iterator
 }
 
 

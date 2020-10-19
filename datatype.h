@@ -5,7 +5,10 @@
 #ifndef LIST_DATATYPE_H
 #define LIST_DATATYPE_H
 
-typedef int Data; //muzu pak vsude zmenit z int na neco jineho
+typedef int Data;
+//muzu pak vsude zmenit z int na neco jineho
+// a nemusim nic resit
+
 
 
 

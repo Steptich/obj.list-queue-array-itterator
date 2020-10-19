@@ -6,7 +6,8 @@
 #define LIST_QUEUE_H
 
 #include "list.h"
-//chci pomoci obojstran seznamu vytvorit frontu - prvni dovnitr je prvni ven
+//chci pomoci obojstran seznamu vytvorit frontu -
+//prvni dovnitr je prvni ven
 class Queue {
     List* list;
 public:
