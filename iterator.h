@@ -18,9 +18,9 @@ public:
     virtual Data& data() = 0;
 };
 //==============================================================================
-//dopredna deklarace
+//dopredna deklarace, includnu az v .cpp
 class List;
-class Element; //includnu az v cpp
+class Element;
 class Array;
 //================================================================================
 
