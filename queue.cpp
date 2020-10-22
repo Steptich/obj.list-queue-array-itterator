@@ -13,7 +13,7 @@ delete list;
 }
 
 void Queue::push(Data d) {
-list->pushBack(d);
+    list->pushBack(d);
 }
 
 Data Queue::front() const {
