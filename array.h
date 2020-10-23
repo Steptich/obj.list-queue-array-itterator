@@ -22,6 +22,7 @@ public:
     int getSize() const { return capacity; }
     friend class ArrayIterator;
     ArrayIterator* getIterator();
+    void expand(); //zdvojnasobi pole
 
 };
 #endif //LIST_ARRAY_H

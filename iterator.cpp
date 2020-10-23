@@ -35,6 +35,38 @@ Data &ListIterator::data() {
     return current->data;
 }
 //=================================================================
+  ArrayIterator::ArrayIterator(Array *a) //nepotrebuji index promenou
+  : array(a), current(-1)
+  {}
+
+  void ArrayIterator::reset() {
+    current=-1;
+    //opet pred vsechny data
+}
+
+    bool ArrayIterator::next()
+{
+    if (current==array->getSize())
+        //pokud neni na konci pole
+    {
+    reset();
+    }
+    else
+    {
+        current++;
+    }
+    if (current==array->getSize()) //pokud na konci pole
+    {
+        return false;
+    }
+    return true;
+}
+
+    Data &ArrayIterator::data() {
+    return array->at(current);
+}
+
+/*alternativa
 ArrayIterator::ArrayIterator(Array *a)
 : array(a), index(-1), current(a->at(index))
 //abych zacinal pred zacatkem
@@ -70,3 +102,4 @@ bool ArrayIterator::next()
 Data &ArrayIterator::data() {
     return current;
 }
+*/

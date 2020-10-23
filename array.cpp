@@ -16,7 +16,7 @@ Array::Array(int size)
 
 Array::Array(Array &src)
 : capacity(src.capacity), data(new Data[capacity])
-{//to stejne
+{//to stejne, ale zkopiruje
     memcpy(this->data,src.data,capacity*sizeof(Data));
 }
 
@@ -35,6 +35,22 @@ void Array::setData(Data d, int index) {
     this->data[index]=d;
 
 }
+
+/*
+void Array::expand() {
+    Data  *newdata = new Data[2*capacity];
+    //vytvori nove dvakrat vetsi pole
+    memcpy(newdata,data,capacity*sizeof(Data));
+    //zkopiruje do newdata data z puvodni az po bit
+    // jenz odpovida velikosti puvodniho pole
+    memset(newdata+capacity*sizeof(Data),0,
+           capacity*sizeof(Data));
+    delete [] data;
+    data=newdata;
+    capacity=2*capacity;
+}
+*/
+
 
 
 
