@@ -36,6 +36,10 @@ void Array::setData(Data d, int index) {
 
 }
 
+Data &Array::operator[](int index) {
+    return data[index];
+}
+
 /*
 void Array::expand() {
     Data  *newdata = new Data[2*capacity];

@@ -22,7 +22,10 @@ public:
     int getSize() const { return capacity; }
     friend class ArrayIterator;
     ArrayIterator* getIterator();
-    void expand(); //zdvojnasobi pole
+    //void expand(); //zdvojnasobi pole
+    Data & operator[](int index);
+    //vlastne dela to stejne co metoda at,
+    // muzu pak vlastne volat indexy jako klasicke pole
 
 };
 #endif //LIST_ARRAY_H

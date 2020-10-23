@@ -63,7 +63,8 @@ int main() {
     ArrayIterator *ai=a.getIterator();
     printSequence(ai);
     findMin(ai);
-
+std::cout << a[1]; //volam pres index diky operatoru
+    /*
     Queue q;
     for (int i = 0; i < 11; ++i) {
         q.push(i);
@@ -72,6 +73,6 @@ int main() {
     {
         std::cout<< q.front() << "\n";
         q.pop();
-    }
+    }*/
     return 0;
 }
